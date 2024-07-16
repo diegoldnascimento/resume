@@ -1,0 +1,213 @@
+%-------------------------
+% Resume in Latex
+% Author : Diego Lopes
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://example.com/}{\Large Diego Lopes do Nascimento}} & Email : \href{diego.lopes.2402@gmail.com}{diego.lopes.2402@gmail.com}\\
+  \href{https://github.com/diegoldnascimento}{https://github.com/diegoldnascimento} & Mobile : \href{tel:+5521994647682}{+55-21-99464-7682} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {PUC-Rio - Pontifícia Universidade Católica do Rio de Janeiro}{Rio de Janeiro, Brazil}
+      {Postgraduate Degree in Computer Software Engineering}{Jan. 2023 -- Jan. 2024}
+    \resumeSubheading
+      {Universidade Estácio de Sá}{Rio de Janeiro, Brazil}
+      {Bachelor of Computer Information Systems}{2012 -- 2016}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+%-----------PROJECTS----------------\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hona}{Current Location}
+      {Staff Software Engineer}{Present}
+      \resumeItemListStart
+        \resumeItem{Impact-Driven Development}
+          {Responsible for identifying points of improvement and helping the company and other teams to scale the Hona Client and Hona App product.}
+      \resumeItemListEnd
+
+\resumeSubheading
+      {Route}{Remote}
+      {Staff Software Engineer}{Feb 2024 - Jul 2024}
+      \resumeItemListStart
+        \resumeItem{Impact-Driven Development}
+          {Spearheaded initiatives that significantly increased revenue by 20\%, improved key metrics, and reduced churn risk from several clients, positively impacting Series C funding, which reached \$40 million.}
+        \resumeItem{Front-End Architecture}
+          {Designed and built scalable front-end architectures using React and Web Components to ensure smooth integration and a great user experience across different platforms.}
+ \resumeItem{E-commerce Integrations}
+          {Implemented seamless integrations with major e-commerce platforms such as Shopify, BigCommerce, WooCommerce, and Amazon, ensuring compatibility with our internal API architecture to enhance the insurance purchase experience for merchants and consumers.}
+        \resumeItem{Team Leadership and Mentorship}
+          {Guided and mentored team members, fostering a collaborative environment that promotes learning and technical growth.}
+        \resumeItem{Project Documentation}
+          {Maintained detailed and up-to-date documentation, including technical specs, project briefs, and specific technical documents to support ongoing and future projects.}
+        \resumeItem{Development Best Practices}
+          {Promoted best practices in the Software Development Life Cycle (SDLC) by implementing tools and technologies like Docker, CI/CD pipelines, Terraform, and AWS infrastructure.}
+        \resumeItem{Testing Frameworks}
+          {Led the adoption of Test-Driven Development (TDD) and Behavior-Driven Development (BDD) frameworks using tools like Testing Library, Jest, Nightmare, and Cypress to ensure reliable code.}
+        \resumeItem{API and Microservices Design}
+          {Designed and managed APIs and microservices using a range of AWS services, such as ECS, RDS, DynamoDB, Redis, SSM, SQS, CloudWatch, S3, and CloudFront, all managed through Infrastructure-as-Code (IaC).}
+        \resumeItem{Delivering Solutions}
+          {Led the creation and deployment of solutions that improved the insurance purchase process, driving customer satisfaction and operational efficiency.}
+      \resumeItemListEnd
+
+  \resumeSubheading
+      {Route}{Remote}
+      {Senior Software Engineer}{Sep 2021 - Feb 2024}
+      \resumeItemListStart
+        \resumeItem{User Interface Architecture}
+          {Coded and designed the architecture for the widgets user interface written in React, implemented on multiple platforms such as Shopify, BigCommerce, WooCommerce, and Magento, to deliver a best-in-class insurance purchase experience for consumers and merchants.}
+        \resumeItem{Project Documentation}
+          {Wrote and maintained up-to-date documentation of projects, including technical specifications, 6-pagers, and specific documentation when needed.}
+        \resumeItem{Front-End Architecture}
+          {Designed scalable front-end architectures using React and Web Components for applications across multiple platforms.}
+        \resumeItem{Development Best Practices}
+          {Drove the SDLC process culture of best practices by implementing Docker, CI/CD deployments, Terraform, and Amazon AWS architecture across multiple projects.}
+        \resumeItem{Testing Frameworks}
+          {Drove and implemented TDD or BDD testing frameworks, such as Testing Library, Jest, Nightmare, and Cypress, for unit, integration, and end-to-end testing across multiple projects.}
+        \resumeItem{API and Microservices Design}
+          {Designed APIs or Microservices that manage a majority of Amazon AWS services, such as ECS, RDS, DynamoDB, Redis, SSM, Amazon SQS, CloudWatch, S3, and CloudFront, managed through Infrastructure-as-Code.}
+        \resumeItem{Mentoring and Coaching}
+          {Mentored and coached team members to help and inspire them with technology topics.}
+      \resumeItemListEnd
+
+  \resumeSubheading
+      {ThoughtLab}{Remote}
+      {Mid-Senior Software Engineer}{Mar 2019 - Aug 2019}
+      \resumeItemListStart
+        \resumeItem{WordPress Development}
+          {Provided top-notch support and maintenance for PHP and WordPress projects by utilizing best practices to develop highly customizable WordPress themes from scratch.}
+        \resumeItem{Plugin Customization}
+          {Coded and customized WordPress plugins while integrating with the WooCommerce plugin, ensuring seamless performance.}
+        \resumeItem{Mobile Project Support}
+          {Offered exceptional maintenance and support for mobile projects developed using Ionic 2 and Firebase, ensuring they operated smoothly.}
+        \resumeItem{WooCommerce Development}
+          {Developed WooCommerce themes from scratch and provided payment gateway integration support, thus ensuring enhanced user experience.}
+
+         \resumeItem{E-commerce Integrations}
+          {Implemented seamless integrations with major e-commerce platforms such as Shopify, BigCommerce, WooCommerce, and Amazon, ensuring compatibility with our internal API architecture to enhance the insurance purchase experience for merchants and consumers.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {A Figueira}{Rio de Janeiro, Brazil}
+      {Mid-Senior Software Engineer}{Mar. 2016 - Mar. 2017}
+      \resumeItemListStart
+        \resumeItem{Mobile App Development}
+          {Developed and maintained a high-performance mobile app for Android and iOS using the Ionic framework, achieving over 100,000 downloads and a 4.5-star rating.}
+        \resumeItem{PHP and WordPress Projects}
+          {Supported and developed features for PHP and WordPress projects, including custom themes and plugins.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lar Fabiano de Cristo}{Rio de Janeiro, Brazil}
+      {Associate Software Developer / Junior Software Engineer}{Aug. 2012 - Feb. 2016}
+      \resumeItemListStart
+        \resumeItem{Web Development}
+          {Developed and maintained web applications, improving user experiences and functionalities.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Typescript Clean Architecture API Boilerplate}
+      {Open source Clean Architecture API to facilitate building up new APIs by using Clean Architecture Software Design}
+  \resumeSubHeadingListEnd
+
+\end{document}
+
