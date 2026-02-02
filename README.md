@@ -1,26 +1,36 @@
-A single-page, one-column resume for software developers. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. The three main sections in the resume are education, experience, and projects.
+# Diego Lopes - Resume
 
-### Motivation
+A single-page, one-column resume optimized for ATS (Applicant Tracking Systems) and human readability. Built with LaTeX for consistent formatting and easy maintenance.
 
-I created this template as managing a resume on Google Docs was hard and changing any formatting was too difficult since it had to be applied in multiple places.
+## Preview
 
-Most currently available templates either focus on two columns, or are multiple pages long that didn't work well for career fairs or online applications.
+| Page 1 | Page 2 |
+|--------|--------|
+| ![Resume Page 1](docs/resume_preview-1.png) | ![Resume Page 2](docs/resume_preview-2.png) |
 
-### Quick start
+## Build
 
-Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf) template.
-
-### Build using Docker
+### Using the build script
 
 ```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex sourabh_bajaj_resume.tex
+./build.sh
 ```
 
-### Preview
+### Using Docker manually
 
-![Resume Screenshot](/resume_preview.png)
+```sh
+docker build -t sb2nov/latex .
+docker run --rm -i -v "$PWD":/data sb2nov/latex pdflatex diego_lopes_resume.tex
+```
 
-### License
+## Structure
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+- `diego_lopes_resume.tex` - LaTeX source file
+- `diego_lopes_resume.pdf` - Generated PDF
+- `docs/` - Preview images
+- `build.sh` - Build script
+- `Dockerfile` - Docker image with texlive-full
+
+## License
+
+Format is MIT. Based on [sb2nov/resume](https://github.com/sb2nov/resume) template.
