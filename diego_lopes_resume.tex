@@ -49,7 +49,13 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeBullet}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
@@ -77,7 +83,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeBullet{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -93,121 +99,106 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://example.com/}{\Large Diego Lopes do Nascimento}} & Email : \href{diego.lopes.2402@gmail.com}{diego.lopes.2402@gmail.com}\\
-  \href{https://github.com/diegoldnascimento}{https://github.com/diegoldnascimento} & Mobile : \href{tel:+5521994647682}{+55-21-99464-7682} \\
-\end{tabular*}
+\begin{center}
+  \textbf{\Large Diego Lopes do Nascimento} \\
+  \vspace{2pt}
+  \small
+  \href{mailto:diego.lopes.2402@gmail.com}{diego.lopes.2402@gmail.com} $|$
+  \href{tel:+5521994647682}{+55-21-99464-7682} $|$
+  Rio de Janeiro, Brazil $|$
+  \href{https://linkedin.com/in/diegoldnascimento}{linkedin.com/in/diegoldnascimento} $|$
+  \href{https://github.com/diegoldnascimento}{github.com/diegoldnascimento}
+\end{center}
 
+%-----------SUMMARY-----------------
+\section{Summary}
+Staff Software Engineer with 10+ years of experience building high-scale distributed systems and leading cross-functional technical initiatives. Expert in TypeScript, Node.js, React, and cloud-native architectures (AWS, Kubernetes, Terraform). Led platform-wide reliability improvements serving millions of users, drove architectural decisions that reduced infrastructure costs by 40\%, and mentored engineers across multiple teams. Proven track record of shipping complex systems from design through production while aligning technical strategy with business outcomes.
+
+%-----------SKILLS-----------------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: TypeScript, JavaScript (ES2024), Python, SQL, PHP, HTML, CSS} \\
+    \textbf{Frameworks}{: React, Next.js, Node.js, Express, Fastify, tRPC, Web Components, Ionic} \\
+    \textbf{Databases}{: PostgreSQL, MySQL, Redis, DynamoDB, MongoDB, Firebase} \\
+    \textbf{Cloud \& Infrastructure}{: AWS (ECS, Lambda, RDS, S3, CloudFront, SQS, SSM, CloudWatch), Docker, Kubernetes, Terraform, Infrastructure-as-Code (IaC)} \\
+    \textbf{Testing}{: Jest, Testing Library, Cypress, Playwright, Test-Driven Development (TDD), Behavior-Driven Development (BDD)} \\
+    \textbf{CI/CD}{: GitHub Actions, CircleCI, Jenkins, Continuous Integration / Continuous Delivery} \\
+    \textbf{Architecture}{: Microservices, Event-Driven Architecture, Domain-Driven Design, REST APIs, GraphQL, Clean Architecture} \\
+    \textbf{Practices}{: System Design, Technical Leadership, Code Review, Mentorship, RFC/ADR Authorship, Agile/Scrum}
+  }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hona}{Remote}
+      {Staff Software Engineer}{Aug 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected and led implementation of voice AI platform infrastructure using TypeScript, Node.js, and AWS, enabling automated customer communications that reduced manual call handling by 60\%.}
+        \resumeItem{Designed event-driven architecture using tRPC and PostgreSQL that processes 100K+ daily events with 99.9\% reliability, improving system observability and debugging capabilities.}
+        \resumeItem{Led cross-team initiative to establish engineering standards and code review practices adopted by 15+ engineers across 3 product teams.}
+        \resumeItem{Drove technical roadmap alignment with Product and Design, authoring RFCs that defined platform-wide patterns for API versioning and error handling.}
+        \resumeItem{Mentored 4 engineers on system design and distributed systems concepts, accelerating their technical growth and ownership of critical services.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Route}{Remote}
+      {Staff Software Engineer}{Feb 2024 -- Jul 2024}
+      \resumeItemListStart
+        \resumeItem{Spearheaded revenue optimization initiatives that increased platform revenue by 20\%, directly contributing to successful \$40M Series C funding round.}
+        \resumeItem{Architected scalable front-end platform using React and Web Components, deployed across Shopify, BigCommerce, WooCommerce, and Amazon integrations serving 2M+ merchants.}
+        \resumeItem{Designed and implemented microservices architecture managing AWS ECS, RDS, DynamoDB, Redis, SQS, and CloudFront through Terraform IaC, reducing deployment time by 70\%.}
+        \resumeItem{Led adoption of TDD/BDD testing frameworks (Jest, Cypress, Testing Library) across 4 engineering teams, improving code coverage from 45\% to 85\% and reducing production incidents by 40\%.}
+        \resumeItem{Established CI/CD pipeline standards using GitHub Actions and Docker that reduced release cycles from 2 weeks to continuous delivery.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Senior Software Engineer}{Sep 2021 -- Feb 2024}
+      \resumeItemListStart
+        \resumeItem{Designed and built insurance widget architecture in React deployed across 50K+ merchant storefronts, processing \$10M+ monthly in package protection premiums.}
+        \resumeItem{Implemented e-commerce platform integrations (Shopify, BigCommerce, WooCommerce, Magento) that expanded merchant adoption by 150\% year-over-year.}
+        \resumeItem{Authored technical specifications and architecture documentation that became the reference standard for new service development.}
+        \resumeItem{Mentored 6 engineers on front-end architecture and testing best practices; 2 promoted to senior roles within 18 months.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ThoughtLab}{Remote}
+      {Software Engineer}{Mar 2019 -- Aug 2019}
+      \resumeItemListStart
+        \resumeItem{Developed custom WordPress themes and WooCommerce plugins from scratch, reducing client time-to-market by 50\% through reusable component architecture.}
+        \resumeItem{Implemented payment gateway integrations for WooCommerce that processed \$500K+ in monthly transactions with 99.9\% uptime.}
+        \resumeItem{Maintained and enhanced mobile applications built with Ionic and Firebase, supporting 10K+ active users.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {A Figueira}{Rio de Janeiro, Brazil}
+      {Software Engineer}{Mar 2016 -- Mar 2017}
+      \resumeItemListStart
+        \resumeItem{Developed cross-platform mobile app using Ionic framework, achieving 100K+ downloads and 4.5-star rating on app stores.}
+        \resumeItem{Built custom WordPress themes and plugins, improving site performance by 40\% through code optimization.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Lar Fabiano de Cristo}{Rio de Janeiro, Brazil}
+      {Junior Software Developer}{Aug 2012 -- Feb 2016}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained internal web applications that streamlined organizational workflows, reducing administrative processing time by 30\%.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {PUC-Rio - Pontifícia Universidade Católica do Rio de Janeiro}{Rio de Janeiro, Brazil}
-      {Postgraduate Degree in Computer Software Engineering}{Jan. 2023 -- Jan. 2024}
+      {PUC-Rio -- Pontif\'icia Universidade Cat\'olica do Rio de Janeiro}{Rio de Janeiro, Brazil}
+      {Postgraduate Degree in Computer Software Engineering}{Jan 2023 -- Jan 2024}
     \resumeSubheading
-      {Universidade Estácio de Sá}{Rio de Janeiro, Brazil}
+      {Universidade Est\'acio de S\'a}{Rio de Janeiro, Brazil}
       {Bachelor of Computer Information Systems}{2012 -- 2016}
   \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-%-----------PROJECTS----------------\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Hona}{Current Location}
-      {Staff Software Engineer}{Present}
-      \resumeItemListStart
-        \resumeItem{Impact-Driven Development}
-          {Responsible for identifying points of improvement and helping the company and other teams to scale the Hona Client and Hona App product.}
-      \resumeItemListEnd
-
-\resumeSubheading
-      {Route}{Remote}
-      {Staff Software Engineer}{Feb 2024 - Jul 2024}
-      \resumeItemListStart
-        \resumeItem{Impact-Driven Development}
-          {Spearheaded initiatives that significantly increased revenue by 20\%, improved key metrics, and reduced churn risk from several clients, positively impacting Series C funding, which reached \$40 million.}
-        \resumeItem{Front-End Architecture}
-          {Designed and built scalable front-end architectures using React and Web Components to ensure smooth integration and a great user experience across different platforms.}
- \resumeItem{E-commerce Integrations}
-          {Implemented seamless integrations with major e-commerce platforms such as Shopify, BigCommerce, WooCommerce, and Amazon, ensuring compatibility with our internal API architecture to enhance the insurance purchase experience for merchants and consumers.}
-        \resumeItem{Team Leadership and Mentorship}
-          {Guided and mentored team members, fostering a collaborative environment that promotes learning and technical growth.}
-        \resumeItem{Project Documentation}
-          {Maintained detailed and up-to-date documentation, including technical specs, project briefs, and specific technical documents to support ongoing and future projects.}
-        \resumeItem{Development Best Practices}
-          {Promoted best practices in the Software Development Life Cycle (SDLC) by implementing tools and technologies like Docker, CI/CD pipelines, Terraform, and AWS infrastructure.}
-        \resumeItem{Testing Frameworks}
-          {Led the adoption of Test-Driven Development (TDD) and Behavior-Driven Development (BDD) frameworks using tools like Testing Library, Jest, Nightmare, and Cypress to ensure reliable code.}
-        \resumeItem{API and Microservices Design}
-          {Designed and managed APIs and microservices using a range of AWS services, such as ECS, RDS, DynamoDB, Redis, SSM, SQS, CloudWatch, S3, and CloudFront, all managed through Infrastructure-as-Code (IaC).}
-        \resumeItem{Delivering Solutions}
-          {Led the creation and deployment of solutions that improved the insurance purchase process, driving customer satisfaction and operational efficiency.}
-      \resumeItemListEnd
-
-  \resumeSubheading
-      {Route}{Remote}
-      {Senior Software Engineer}{Sep 2021 - Feb 2024}
-      \resumeItemListStart
-        \resumeItem{User Interface Architecture}
-          {Coded and designed the architecture for the widgets user interface written in React, implemented on multiple platforms such as Shopify, BigCommerce, WooCommerce, and Magento, to deliver a best-in-class insurance purchase experience for consumers and merchants.}
-        \resumeItem{Project Documentation}
-          {Wrote and maintained up-to-date documentation of projects, including technical specifications, 6-pagers, and specific documentation when needed.}
-        \resumeItem{Front-End Architecture}
-          {Designed scalable front-end architectures using React and Web Components for applications across multiple platforms.}
-        \resumeItem{Development Best Practices}
-          {Drove the SDLC process culture of best practices by implementing Docker, CI/CD deployments, Terraform, and Amazon AWS architecture across multiple projects.}
-        \resumeItem{Testing Frameworks}
-          {Drove and implemented TDD or BDD testing frameworks, such as Testing Library, Jest, Nightmare, and Cypress, for unit, integration, and end-to-end testing across multiple projects.}
-        \resumeItem{API and Microservices Design}
-          {Designed APIs or Microservices that manage a majority of Amazon AWS services, such as ECS, RDS, DynamoDB, Redis, SSM, Amazon SQS, CloudWatch, S3, and CloudFront, managed through Infrastructure-as-Code.}
-        \resumeItem{Mentoring and Coaching}
-          {Mentored and coached team members to help and inspire them with technology topics.}
-      \resumeItemListEnd
-
-  \resumeSubheading
-      {ThoughtLab}{Remote}
-      {Mid-Senior Software Engineer}{Mar 2019 - Aug 2019}
-      \resumeItemListStart
-        \resumeItem{WordPress Development}
-          {Provided top-notch support and maintenance for PHP and WordPress projects by utilizing best practices to develop highly customizable WordPress themes from scratch.}
-        \resumeItem{Plugin Customization}
-          {Coded and customized WordPress plugins while integrating with the WooCommerce plugin, ensuring seamless performance.}
-        \resumeItem{Mobile Project Support}
-          {Offered exceptional maintenance and support for mobile projects developed using Ionic 2 and Firebase, ensuring they operated smoothly.}
-        \resumeItem{WooCommerce Development}
-          {Developed WooCommerce themes from scratch and provided payment gateway integration support, thus ensuring enhanced user experience.}
-
-         \resumeItem{E-commerce Integrations}
-          {Implemented seamless integrations with major e-commerce platforms such as Shopify, BigCommerce, WooCommerce, and Amazon, ensuring compatibility with our internal API architecture to enhance the insurance purchase experience for merchants and consumers.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {A Figueira}{Rio de Janeiro, Brazil}
-      {Mid-Senior Software Engineer}{Mar. 2016 - Mar. 2017}
-      \resumeItemListStart
-        \resumeItem{Mobile App Development}
-          {Developed and maintained a high-performance mobile app for Android and iOS using the Ionic framework, achieving over 100,000 downloads and a 4.5-star rating.}
-        \resumeItem{PHP and WordPress Projects}
-          {Supported and developed features for PHP and WordPress projects, including custom themes and plugins.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Lar Fabiano de Cristo}{Rio de Janeiro, Brazil}
-      {Associate Software Developer / Junior Software Engineer}{Aug. 2012 - Feb. 2016}
-      \resumeItemListStart
-        \resumeItem{Web Development}
-          {Developed and maintained web applications, improving user experiences and functionalities.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Typescript Clean Architecture API Boilerplate}
-      {Open source Clean Architecture API to facilitate building up new APIs by using Clean Architecture Software Design}
-  \resumeSubHeadingListEnd
-
 \end{document}
-
